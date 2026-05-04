@@ -110,7 +110,7 @@ const codeLines: { tokens: { text: string; color: string }[] }[] = [
     tokens: [
       { text: "      passion", color: "#96bf48" },
       { text: '="', color: "#a1a1aa" },
-      { text: "shipping things that actually work", color: "#4ade80" },
+      { text: "Shipping things that actually work", color: "#4ade80" },
       { text: '"', color: "#a1a1aa" },
     ],
   },
@@ -204,7 +204,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.15 }}
-              className="text-5xl sm:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.06] mb-4"
+              className="text-[2.6rem] min-[400px]:text-5xl sm:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.06] mb-4"
             >
               Hello, I&apos;m{" "}
               <span
