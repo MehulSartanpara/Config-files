@@ -16,7 +16,9 @@
       "Bash(node -e ' *)",
       "Bash(node -e \"const sharp = require\\('sharp'\\); sharp\\('public/images/mehul-profile.png'\\).metadata\\(\\).then\\(m => console.log\\(m.width, 'x', m.height\\)\\)\")",
       "Bash(npm i *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
