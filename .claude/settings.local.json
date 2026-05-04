@@ -1,7 +1,22 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.abdulmomin.dev)"
+      "WebFetch(domain:www.abdulmomin.dev)",
+      "PowerShell(cd \"d:\\\\MEHUL\\\\portfolio\\\\project\" && npm run dev 2>&1 &)",
+      "Bash(Get-ChildItem -Recurse \"d:\\\\MEHUL\\\\portfolio\\\\project\\\\public\")",
+      "Bash(Select-Object FullName, Length)",
+      "PowerShell(Get-ChildItem \"d:\\\\MEHUL\\\\portfolio\\\\project\\\\public\" -Recurse -Force | ForEach-Object { $_.FullName })",
+      "WebFetch(domain:mehulsartanpara.pages.dev)",
+      "Bash(npm install *)",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/lenis/package.json'\\).version\\)\")",
+      "Bash(node -e \"console.log\\('three:', require\\('./node_modules/three/package.json'\\).version, '| vanta:', require\\('./node_modules/vanta/package.json'\\).version\\)\")",
+      "Bash(copy \"d:\\\\MEHUL\\\\portfolio\\\\project\\\\public\\\\images\\\\mehul-profile.png\" \"d:\\\\MEHUL\\\\portfolio\\\\project\\\\src\\\\app\\\\icon.png\")",
+      "PowerShell(Copy-Item \"d:\\\\MEHUL\\\\portfolio\\\\project\\\\public\\\\images\\\\mehul-profile.png\" \"d:\\\\MEHUL\\\\portfolio\\\\project\\\\src\\\\app\\\\icon.png\")",
+      "Bash(node -e \"require\\('sharp'\\); console.log\\('ok'\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"const sharp = require\\('sharp'\\); sharp\\('public/images/mehul-profile.png'\\).metadata\\(\\).then\\(m => console.log\\(m.width, 'x', m.height\\)\\)\")",
+      "Bash(npm i *)",
+      "Bash(npm run *)"
     ]
   }
 }
