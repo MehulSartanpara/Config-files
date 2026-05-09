@@ -437,10 +437,10 @@ export default function Hero() {
               >
                 <div className="flex items-center gap-3">
                   <span style={{ color: "var(--accent)" }}>● TypeScript</span>
-                  <span>Ln 15, Col 2</span>
+                  <span className="hidden lg:inline">Ln 15, Col 2</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span>UTF-8</span>
+                  <span className="hidden lg:inline">UTF-8</span>
                   <span style={{ color: "var(--accent)" }}>Shopify Plus</span>
                 </div>
               </div>
