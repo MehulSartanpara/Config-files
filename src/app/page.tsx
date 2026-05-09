@@ -22,7 +22,7 @@ export default function Home() {
       <div
         aria-hidden="true"
         className="pointer-events-none fixed inset-0"
-        style={{ zIndex: 0, background: "rgba(9,9,11,0.75)" }}
+        style={{ zIndex: 0, background: "rgba(9,9,11,0.78)" }}
       />
 
       {/* Page content sits above the canvas */}
