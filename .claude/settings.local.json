@@ -18,7 +18,12 @@
       "Bash(npm i *)",
       "Bash(npm run *)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(npx tsc *)",
+      "Bash(del \"d:\\\\MEHUL\\\\portfolio\\\\project\\\\src\\\\components\\\\CursorGlow.tsx\")",
+      "WebFetch(domain:cdn.simpleicons.org)",
+      "Bash(curl -s \"https://cdn.simpleicons.org/shopify\")",
+      "Bash(curl -s \"https://cdn.simpleicons.org/upwork\")"
     ]
   }
 }

@@ -198,12 +198,14 @@ export default function TechStack() {
                 background: "var(--surface)",
                 border: "1px solid var(--line)",
               }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.borderColor = `${color}40`)
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.borderColor = "var(--line)")
-              }
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = `${color}40`;
+                e.currentTarget.style.boxShadow = `0 0 32px ${color}14, 0 8px 32px rgba(0,0,0,0.25)`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "var(--line)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
             >
               {/* Card header */}
               <div className="flex items-center justify-between">
@@ -244,12 +246,16 @@ export default function TechStack() {
                     onMouseEnter={(e) => {
                       e.currentTarget.style.color = color;
                       e.currentTarget.style.borderColor = `${color}50`;
-                      e.currentTarget.style.background = `${color}08`;
+                      e.currentTarget.style.background = `${color}0d`;
+                      e.currentTarget.style.transform = "translateY(-2px) scale(1.05)";
+                      e.currentTarget.style.boxShadow = `0 0 12px ${color}28`;
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.color = "var(--muted)";
                       e.currentTarget.style.borderColor = "var(--line)";
                       e.currentTarget.style.background = "transparent";
+                      e.currentTarget.style.transform = "translateY(0) scale(1)";
+                      e.currentTarget.style.boxShadow = "none";
                     }}
                   >
                     {tech}

@@ -6,7 +6,7 @@ import { UpworkIcon } from "./SocialIcons";
 
 const apps = [
   {
-    name: "Schedulify: Promo Scheduler",
+    name: "Schedulify ‑ Promo Scheduler",
     tagline: "Run seasonal sales and launches without manual work.",
     description:
       "Schedule themes, products, prices, tags, discounts, and content visibility for events. Create an event once — the app handles everything at the scheduled start and end times.",

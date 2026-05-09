@@ -1,7 +1,41 @@
 "use client";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
+
+function StatCounter({ raw }: { raw: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const started = useRef(false);
+
+  const suffix = raw.replace(/[\d.]/g, "");
+  const num = parseFloat(raw);
+  const decimals = raw.includes(".") ? 1 : 0;
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || started.current) return;
+      started.current = true;
+      const dur = 1400;
+      const t0 = performance.now();
+      const tick = (now: number) => {
+        const p = Math.min((now - t0) / dur, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        const val = ease * num;
+        el.textContent = (decimals ? val.toFixed(decimals) : Math.floor(val).toString()) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      obs.disconnect();
+    }, { threshold: 0.5 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [num, suffix, decimals]);
+
+  return <span ref={ref}>{"0" + suffix}</span>;
+}
 
 /* ── Upwork Top Rated badge (official SVG) ── */
 function TopRatedBadge() {
@@ -265,7 +299,7 @@ export default function About() {
                     className="text-2xl font-bold font-mono"
                     style={{ color: "var(--accent)" }}
                   >
-                    {value}
+                    <StatCounter raw={value} />
                   </div>
                   <div className="text-xs mt-1" style={{ color: "var(--dim)" }}>
                     {label}

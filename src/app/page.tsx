@@ -8,10 +8,13 @@ import Apps from "@/components/Apps";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import VantaBackground from "@/components/VantaBackground";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
+
       {/* Vanta NET — fixed behind all content */}
       <VantaBackground />
 
@@ -19,7 +22,7 @@ export default function Home() {
       <div
         aria-hidden="true"
         className="pointer-events-none fixed inset-0"
-        style={{ zIndex: 0, background: "rgba(9,9,11,0.78)" }}
+        style={{ zIndex: 0, background: "rgba(9,9,11,0.75)" }}
       />
 
       {/* Page content sits above the canvas */}

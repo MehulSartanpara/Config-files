@@ -211,8 +211,14 @@ export default function Projects() {
               whileHover={{ y: -5 }}
               className="group flex flex-col rounded-xl overflow-hidden transition-all duration-300"
               style={{ background: "var(--surface)", border: "1px solid var(--line)" }}
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = `${color}45`)}
-              onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--line)")}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = `${color}45`;
+                e.currentTarget.style.boxShadow = `0 0 40px ${color}18, 0 20px 40px rgba(0,0,0,0.3)`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "var(--line)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
             >
               <ProjectPreview color={color} url={url} index={i} />
 
