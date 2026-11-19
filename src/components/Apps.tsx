@@ -120,7 +120,7 @@ export default function Apps() {
           ))}
         </div>
 
-        {/* Upwork recognition banner */}
+        {/* Upwork recognition banner here */}
         <motion.a
           href="https://www.upwork.com/freelancers/~01fc9799d190e66321"
           target="_blank"
